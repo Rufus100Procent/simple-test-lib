@@ -1,6 +1,9 @@
 package com.testlib;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.net.URI;
 
 @RestController
 @RequestMapping("/test-lib")
@@ -10,6 +13,13 @@ public class GreetingController {
 
     public GreetingController(GreetingService greetingService) {
         this.greetingService = greetingService;
+    }
+
+    @GetMapping({"", "/"})
+    public ResponseEntity<Void> serveUI() {
+        return ResponseEntity.status(302)
+                .location(URI.create("/test-lib/index.html"))
+                .build();
     }
 
     @GetMapping("/greet/{name}")
