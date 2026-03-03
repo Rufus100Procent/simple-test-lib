@@ -26,8 +26,14 @@ bun install
 bun run dev
 ```
 
+## IMAGE
+<img width="1313" height="634" alt="image" src="https://github.com/user-attachments/assets/622379c5-0584-4854-ba55-3d4fc967ab35" />
+
+
 ## Build
 
 The Vue app is built automatically by Maven during `mvn clean install` via the `exec-maven-plugin`.
-The compiled output is bundled into `target/classes/static/test-lib/` and packaged into the library JAR.
+
+
+compiled output is bundled into `target/classes/static/test-lib/` and packaged into the library JAR.
 You do not need to build this manually.
